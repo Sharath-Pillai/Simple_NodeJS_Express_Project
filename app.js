@@ -1,6 +1,6 @@
 import express, { json } from 'express';
 const app = express();
-const PORT = 3000;
+
 
 // Middleware to parse JSON bodies
 app.use(json());
@@ -74,6 +74,14 @@ app.delete('/users/:id', (req, res) => {
     const deletedUser = users.splice(userIndex, 1);
     res.json({ message: 'User deleted successfully', user: deletedUser[0] });
 });
+
+// Basic route
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to the NODEJS_EXPRESS_PROJECT User Management API' });
+});
+
+const PORT = process.env.PORT || 3000;
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
