@@ -2,10 +2,10 @@
   "name": "nodejs-express-project",
   "version": "1.0.0",
   "description": "Express app to manage users",
-  "main": "app.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "express": "^4.18.2"
