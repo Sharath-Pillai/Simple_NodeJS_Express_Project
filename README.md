@@ -19,7 +19,7 @@ Server runs on http://localhost:3000
 MethodEndpointDescriptionPOST/usersCreate a new userGET/usersGet all usersGET/users/:idGet a specific userPUT/users/:idUpdate a specific userDELETE/users/:idDelete a specific user
 
 4) Usage Examples
-Create a User
+#Create a User
 http POST /users
 Content-Type: application/json
 
@@ -28,26 +28,29 @@ Content-Type: application/json
   "email": "john@example.com",
   "phone": "9876543210"
 }
-Get All Users
+
+#Get All Users
 httpGET /users
-Get a Specific User
+
+#Get a Specific User
 httpGET /users/1716123456789
-Update a User
+
+#Update a User
 httpPUT /users/1716123456789
 Content-Type: application/json
 
 {
   "username": "john_updated"
 }
-Delete a User
+
+#Delete a User
 httpDELETE /users/1716123456789
 
-🛠 Tech Stack
 
+5) Tech Stack
 Runtime: Node.js
 Framework: Express.js
 Storage: In-memory (array)
 
 
-⚠️ Note
-Data is stored in-memory and will reset every time the server restarts. For persistent storage, integrate a database like MongoDB or MySQL.
+Note: Data is stored in-memory and will reset every time the server restarts. For persistent storage, integrate a database like MongoDB or MySQL.
